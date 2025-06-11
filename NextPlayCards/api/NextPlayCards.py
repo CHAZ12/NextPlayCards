@@ -27,7 +27,7 @@ processed_events = {}
 
 app = Flask(__name__)
 
-@app.route('//api/NextPlayCards', methods=['GET'])
+@app.route('/api/NextPlayCards', methods=['GET'])
 def raid_webhook():
     if request.method == "GET":
         name = request.args.get('name')
