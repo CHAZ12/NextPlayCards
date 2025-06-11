@@ -3,6 +3,10 @@
     {
       "src": "api/NextPlayCards.py",
       "use": "@vercel/python"
+    },
+    {
+        "src":"GetDatabase.py",
+        "use":"@vercel/python"
     }
   ],
   "routes": [
