@@ -26,14 +26,13 @@ key = os.getenv('key')
 
 app = Flask(__name__)
 
-@app.route('/api/NextPlayCards', methods=['GET'])
+@app.route('/', methods=['GET'])
 def raid_webhook():
     if request.method == "GET":
         name = request.args.get('name')
         password = request.args.get('password')
         type = request.args.get('type')
         amount = request.args.get('amount', default=0, type=int)
-        password = ""
 
         if not name:
             return 'Empty name', 400
