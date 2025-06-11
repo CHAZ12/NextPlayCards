@@ -20,9 +20,10 @@ try:
     print('module werkzeug is installed')
 except ModuleNotFoundError:
     subprocess.call([sys.executable, '-m', 'pip', 'install', 'werkzeug'])
-
-    
 key = os.getenv('key')
+CONFIG_FILE = 'config.json'
+access_token = None  # Define globally at the top of your script
+processed_events = {}
 
 app = Flask(__name__)
 
