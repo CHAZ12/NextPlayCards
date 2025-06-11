@@ -3,7 +3,7 @@ from flask import Flask, request, jsonify, Response
 import subprocess
 import sys
 import os
-sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+#sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 import time
 from dotenv import load_dotenv
 load_dotenv()
