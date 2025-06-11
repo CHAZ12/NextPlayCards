@@ -7,7 +7,7 @@
   ],
   "routes": [
     {
-      "src": "api/NextPlayCards",
+      "src": "/api/NextPlayCards",
       "dest": "api/NextPlayCards.py"
     }
   ]
