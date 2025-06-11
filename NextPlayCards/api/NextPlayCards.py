@@ -3,7 +3,7 @@ from flask import Flask, request, jsonify, Response
 import subprocess
 import sys
 import os
-#sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 import time
 from dotenv import load_dotenv
 load_dotenv()
@@ -20,10 +20,9 @@ try:
     print('module werkzeug is installed')
 except ModuleNotFoundError:
     subprocess.call([sys.executable, '-m', 'pip', 'install', 'werkzeug'])
+
+    
 key = os.getenv('key')
-CONFIG_FILE = 'config.json'
-access_token = None  # Define globally at the top of your script
-processed_events = {}
 
 app = Flask(__name__)
 
@@ -34,6 +33,7 @@ def raid_webhook():
         password = request.args.get('password')
         type = request.args.get('type')
         amount = request.args.get('amount', default=0, type=int)
+        password = ""
 
         if not name:
             return 'Empty name', 400
