@@ -1,0 +1,14 @@
+{
+  "builds": [
+    {
+      "src": "api/NextPlayCards.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "api/NextPlayCards",
+      "dest": "api/NextPlayCards.py"
+    }
+  ]
+}
